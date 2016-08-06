@@ -52,7 +52,7 @@ public class AppRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             imageView = (ImageView) itemView.findViewById(R.id.app_icon);
             textView = (TextView) itemView.findViewById(R.id.app_name);
 
-            // 另一种设置点击事件..
+//             另一种设置点击事件..
 //            itemView.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {

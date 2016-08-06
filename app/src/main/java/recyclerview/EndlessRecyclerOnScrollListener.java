@@ -7,8 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-import com.bumptech.glide.Glide;
-
 /**
  * Created by cundong on 2015/10/9.
  * <p/>
@@ -88,16 +86,6 @@ public class EndlessRecyclerOnScrollListener extends RecyclerView.OnScrollListen
         int totalItemCount = layoutManager.getItemCount();
         if ((visibleItemCount > 0 && currentScrollState == RecyclerView.SCROLL_STATE_IDLE && (lastVisibleItemPosition) >= totalItemCount - 1)) {
             onLoadNextPage(recyclerView);
-        }
-
-        switch (newState) {
-            case RecyclerView.SCROLL_STATE_IDLE://滚动停止时
-                Glide.with(context).resumeRequests();
-                break;
-//            case RecyclerView.SCROLL_STATE_DRAGGING://拖拽滚动时
-            case RecyclerView.SCROLL_STATE_SETTLING://动画滚动时
-                Glide.with(context).pauseRequests();
-                break;
         }
     }
 
